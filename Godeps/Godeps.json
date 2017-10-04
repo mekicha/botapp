@@ -5,7 +5,7 @@
 	"Deps": [
 		{
 			"ImportPath": "github.com/mekicha/telebot",
-			"Rev": "2498bdc1a5b6d371ae271aff70b00b116f906da4"
+			"Rev": "cab9155a8c69759b626923f4856e938b197bf3e6"
 		}
 	]
 }
