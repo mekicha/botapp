@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("Listening...")
 	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	if err != nil {
-		log.Fatal("Listen and Serve Error:")
+		log.Fatal("Listen and Serve Error")
 	}
 
 }
