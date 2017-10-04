@@ -2,5 +2,10 @@
 	"ImportPath": "github.com/mekicha/webapp",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v79",
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/mekicha/telebot",
+			"Rev": "2498bdc1a5b6d371ae271aff70b00b116f906da4"
+		}
+	]
 }
