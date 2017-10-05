@@ -5,14 +5,14 @@ import (
 	"log"
 	"net/http"
 	"os"
+
 	"github.com/mekicha/telebot"
 )
 
 func main() {
-	
+
 	http.HandleFunc("/", handler)
-	
-	// http.HandleFunc("/" + bot.Token, botHandler)
+
 	fmt.Println("Listening...")
 	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	if err != nil {
@@ -29,8 +29,9 @@ func handler(res http.ResponseWriter, req *http.Request) {
 	}
 
 	log.Printf("Authorized on account %s", bot.Owner.Username)
+
 	updates := bot.ListenForWebhook("/" + bot.Token)
-	
+
 	for update := range updates {
 		fmt.Fprintf(res, "%+v\n", update)
 	}
