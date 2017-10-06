@@ -10,11 +10,11 @@ import (
 )
 
 func main() {
-	 mux := http.NewServeMux()
-	 mux.HandleFunc("/", handler)
+	//  mux := http.NewServeMux()
+	 http.HandleFunc("/", handler)
 
 	fmt.Println("Listening...")
-	go http.ListenAndServe(":"+os.Getenv("PORT"), mux)
+	go http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	
 }
 
