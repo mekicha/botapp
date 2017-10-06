@@ -27,7 +27,7 @@ func handler(res http.ResponseWriter, req *http.Request) {
 
 	log.Printf("Authorized on account %s", bot.Owner.Username)
 
-	updates := bot.ListenForWebhook("/" + bot.Token)
+	updates, _ := bot.ListenForWebhook("/" + bot.Token)
 
 	for update := range updates {
 		log.Println(update)
