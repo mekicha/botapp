@@ -14,7 +14,7 @@ func main() {
 	 http.HandleFunc("/", handler)
 
 	fmt.Println("Listening...")
-	go http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), nil))
 	
 }
 
