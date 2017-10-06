@@ -14,11 +14,8 @@ func main() {
 	 mux.HandleFunc("/", handler)
 
 	fmt.Println("Listening...")
-	err := http.ListenAndServe(":"+os.Getenv("PORT"), mux)
-	if err != nil {
-		log.Fatal("Listen and Serve Error")
-	}
-
+	go http.ListenAndServe(":"+os.Getenv("PORT"), mux)
+	
 }
 
 func handler(res http.ResponseWriter, req *http.Request) {
