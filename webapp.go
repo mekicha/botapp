@@ -18,7 +18,7 @@ func main() {
 
 	log.Printf("Authorized on account %s", bot.Owner.Username)
 
-	updates, _ := bot.ListenForWebhook("/" + bot.Token)
+	updates := bot.ListenForWebhook("/" + bot.Token)
 
 for update := range updates {
 		log.Printf("%+v\n", update)
