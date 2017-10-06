@@ -30,6 +30,7 @@ func handler(res http.ResponseWriter, req *http.Request) {
 	updates := bot.ListenForWebhook("/" + bot.Token)
 
 	for update := range updates {
+		log.Println(update)
 		fmt.Fprintf(res, "%+v\n", update)
 	}
 }
